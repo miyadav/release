@@ -6,6 +6,13 @@ ref:
   cli: latest
   timeout: 12h0m0s
   env:
+  - name: E2E_RUN_TAGS
+    default: ""
+    documentation: |
+      It is used to filter the cucushift cases.
+      '@ccm' - to run only ccm cases
+      '@mapi' - to run only mapi cases
+      '@cas' - to run only autoscaler cases
   - name: TEST_FILTERS_CLUSTERINFRASTRUCTURE
     default: "!disruptive&&!autoscaler"
     documentation: |
